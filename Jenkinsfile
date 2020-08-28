@@ -10,6 +10,7 @@ pipeline {
 
     stage('test') {
       steps {
+        sh './test_build.sh'
         junit 'target/surefire-reports/*.xml'
       }
     }
