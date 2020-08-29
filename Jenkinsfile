@@ -6,7 +6,6 @@ pipeline {
         sh '''echo I am $HERO
 chmod +x ./test_build.sh
 ./test_build.sh'''
-        archiveArtifacts(artifacts: 'target/*.jar', fingerprint: true)
       }
     }
 
