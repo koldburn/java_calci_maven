@@ -1,15 +1,21 @@
 pipeline {
   agent any
   stages {
-    stage('build') {
+    stage('Fluffy Build') {
+      steps {
+        sh 'mvn package'
+      }
+    }
+
+    stage('Fluffy Test') {
       steps {
         sh 'mvn clean test'
       }
     }
 
-    stage('junit') {
+    stage('Fluffy Deploy') {
       steps {
-        junit '**/surefire-reports/*.xml'
+        echo 'This is deploy stage'
       }
     }
 
