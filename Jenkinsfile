@@ -3,8 +3,7 @@ pipeline {
   stages {
     stage('Buzz Build') {
       steps {
-        sh '''chmod +x ./build.sh
-./build.sh'''
+        sh 'mvn package'
         archiveArtifacts(artifacts: 'target/*.jar', fingerprint: true)
       }
     }
