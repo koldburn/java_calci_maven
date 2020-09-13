@@ -6,6 +6,7 @@ pipeline {
         sh '''chmod +x ./build.sh
 ./build.sh'''
         archiveArtifacts(artifacts: 'target/*.jar', fingerprint: true)
+        sh 'echo "batman is from ${city}"'
       }
     }
 
@@ -16,5 +17,8 @@ pipeline {
       }
     }
 
+  }
+  environment {
+    city = 'gautham'
   }
 }
