@@ -9,7 +9,7 @@ pipeline {
       }
     }
 
-    stage('') {
+    stage('Buzz Test') {
       steps {
         echo 'this is test step'
       }
